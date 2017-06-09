@@ -14,6 +14,7 @@ namespace move_labels
     {
         int vx = -10;
         int vy = -10;
+        
         public Form1()
         {
             InitializeComponent();
@@ -25,19 +26,19 @@ namespace move_labels
             label1.Top += vy;
             if (label1.Left <= 0)
             {
-                vx = 10;
+                vx = Math.Abs(vx);
             }
-            if(label1.Left >= 662)
+            if(label1.Left >= ClientSize.Width - label1.Width)
             {
-                vx = -10;
+                vx = -Math.Abs(vx);
             }
             if(label1.Top <= 0)
             {
-                vy = 10;
+                vy = Math.Abs(vy);
             }
-            if(label1.Top >= 350)
+            if(label1.Top >= ClientSize.Height-label1.Height)
             {
-                vy = -10;
+                vy = -Math.Abs(vy);
             }
         }
     }
