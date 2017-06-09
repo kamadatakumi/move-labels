@@ -25,11 +25,19 @@ namespace move_labels
             label1.Top += vy;
             if (label1.Left <= 0)
             {
-                vx += 10;
+                vx = 10;
+            }
+            if(label1.Left >= 662)
+            {
+                vx = -10;
             }
             if(label1.Top <= 0)
             {
-                vy += 10;
+                vy = 10;
+            }
+            if(label1.Top >= 350)
+            {
+                vy = -10;
             }
         }
     }
