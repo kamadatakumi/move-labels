@@ -14,6 +14,7 @@ namespace move_labels
     {
         int vx = -10;
         int vy = -10;
+        int iTime = 0;
         
         public Form1()
         {
@@ -22,6 +23,8 @@ namespace move_labels
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            iTime++;
+            label5.Text = "" + iTime;
             // 2次元クラスPoint型の変数cposを宣言
             Point cpos;
 
@@ -45,8 +48,9 @@ namespace move_labels
                 label1.Left < cpos.X &&
                 label1.Right > cpos.X)
             {
-                //label1.Visible = false;
-                label1.Text = "あたり";
+                label1.Visible = false;
+                //label1.Text = "あたり";
+                timer1.Enabled = false;
             }
             label1.Left += vx;
             label1.Top += vy;
