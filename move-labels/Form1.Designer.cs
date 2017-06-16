@@ -74,7 +74,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label4.Location = new System.Drawing.Point(416, 252);
+            this.label4.Location = new System.Drawing.Point(362, 321);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(62, 12);
             this.label4.TabIndex = 3;
@@ -92,6 +92,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

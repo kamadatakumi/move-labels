@@ -40,6 +40,14 @@ namespace move_labels
             label4.Left = cpos.X + -31 /*- Width/2*/;
             label4.Top = cpos.Y + -6 /*- Height/2*/;
 
+            if (label1.Top < cpos.Y &&
+                label1.Bottom > cpos.Y &&
+                label1.Left < cpos.X &&
+                label1.Right > cpos.X)
+            {
+                //label1.Visible = false;
+                label1.Text = "あたり";
+            }
             label1.Left += vx;
             label1.Top += vy;
             if (label1.Left <= 0)
@@ -66,6 +74,16 @@ namespace move_labels
         }
 
         private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
         {
 
         }
